@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Введіть пароль</title>
+    <script src="js/script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Загальні стилі */
+      body {
+        font-family: -apple-system, 'Roboto', sans-serif;
+        background: linear-gradient(145deg, #e0e5ec, #f9f9f9);
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 16px;
+        color: #333;
+      }
+
+      /* Контейнер */
+      .container {
+        background: #ffffff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1),
+          inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 16px;
+        padding: 24px;
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      /* Заголовок */
+      .title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #1d1d1f;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+
+      /* Поле вводу */
+      input[type='password'] {
+        /* width: 100%; */
+        padding: 12px;
+        border: 1px solid #d1d1d6;
+        border-radius: 10px;
+        font-size: 16px;
+        background: #f1f1f3;
+        outline: none;
+        transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+
+      input[type='password']:focus {
+        border-color: #5ac8fa;
+        box-shadow: 0 0 8px rgba(90, 200, 250, 0.5);
+      }
+
+      /* Кнопка */
+      button[type='submit'] {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+        background: #111;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 16px;
+        transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+      }
+
+      button[type='submit']:hover {
+        background: #222;
+      }
+
+      button[type='submit']:active {
+        background: #111;
+      }
+
+      /* Естетичний акцент */
+      button[type='submit']:focus {
+        outline: 2px solid #444;
+        outline-offset: 2px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Введіть PIN-код:</h1>
+      <form onsubmit="return checkPassword(this)">
+        <input type="password" id="password" required />
+        <button type="submit">Відправити</button>
+      </form>
+    </div>
+  </body>
+</html>
