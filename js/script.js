@@ -1,6 +1,6 @@
 function checkPassword(form) {
   const password = form.password.value
-  const correctPassword = '1234'
+  const correctPassword = '281227'
 
   if (password === correctPassword) {
     window.location.href = 'video.html'
